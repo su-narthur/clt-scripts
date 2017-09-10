@@ -22,7 +22,7 @@ interface ${PROPERNAME}Props {
 }
 
 const ${PROPERNAME}: React.StatelessComponent<${PROPERNAME}Props> = props =>
-    <div className={'${LAYER}-${NAME} '+props.className}></div>
+    <div className={'${LAYER}-${NAME} ' + props.className}></div>
 
 const Styled${PROPERNAME} = styled(${PROPERNAME})\`
 
