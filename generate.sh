@@ -32,8 +32,8 @@ export default Styled${PROPERNAME}
 EOF
 
 cat <<EOF > $NAME.stories.tsx
-import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import * as React from 'react'
 import ${PROPERNAME} from './${NAME}'
 
 storiesOf('${LAYER}/${PROPERNAME}', module)
