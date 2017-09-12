@@ -21,8 +21,10 @@ interface ${PROPERNAME}Props {
     className?: string
 }
 
-const ${PROPERNAME}: React.StatelessComponent<${PROPERNAME}Props> = props =>
-    <div className={'${LAYER}-${NAME} ' + props.className}></div>
+const ${PROPERNAME}: React.StatelessComponent<${PROPERNAME}Props> = props => {
+    const classes = 'uk-form-label ' + props.className
+    return <div className={classes}>{props.children}</div>
+}
 
 const Styled${PROPERNAME} = styled(${PROPERNAME})\`
 
