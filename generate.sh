@@ -7,12 +7,12 @@ if ! [ $# -eq 2 ]
 fi
 
 NAME=$2
-first=`echo $NAME|cut -c1|tr [a-z] [A-Z]`
-second=`echo $NAME|cut -c2-`
-PROPERNAME=$first$second
+first=`echo ${NAME}|cut -c1|tr [a-z] [A-Z]`
+second=`echo ${NAME}|cut -c2-`
+PROPERNAME=${first}${second}
 LAYER=$1
 
-cat <<EOF > $NAME.tsx
+cat <<EOF > ${NAME}.tsx
 import * as React from 'react'
 import { default as styled, ThemeInterface } from '../../styled-components'
 
@@ -33,7 +33,7 @@ const Styled${PROPERNAME} = styled(${PROPERNAME})\`
 export default Styled${PROPERNAME}
 EOF
 
-cat <<EOF > $NAME.stories.tsx
+cat <<EOF > ${NAME}.stories.tsx
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import ${PROPERNAME} from './${NAME}'
