@@ -22,7 +22,7 @@ interface ${PROPERNAME}Props {
 }
 
 const ${PROPERNAME}: React.StatelessComponent<${PROPERNAME}Props> = props => {
-    const classes = 'uk-form-label ' + props.className
+    const classes = '${LAYER}-${NAME} ' + props.className
     return <div className={classes}>{props.children}</div>
 }
 
@@ -33,7 +33,7 @@ const Styled${PROPERNAME} = styled(${PROPERNAME})\`
 export default Styled${PROPERNAME}
 EOF
 
-cat <<EOF > ${NAME}.stories.tsx
+cat <<EOF > ${NZAME}.stories.tsx
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import ${PROPERNAME} from './${NAME}'
