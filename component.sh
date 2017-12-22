@@ -14,10 +14,10 @@ LAYER=$1
 
 cat <<EOF > ${NAME}.tsx
 import * as React from 'react'
-import { default as styled, ThemeInterface } from '../../styled-components'
+import { default as styled, ITheme } from '../../styled-components'
 
 interface ${PROPERNAME}Props {
-    theme?: ThemeInterface
+    theme?: ITheme
     className?: string
 }
 

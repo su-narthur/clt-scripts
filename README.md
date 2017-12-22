@@ -3,9 +3,7 @@
 ## Installation
 
 ```bash
-chmod +x *.sh
-cp ./generate.sh /usr/local/bin/clt-component
-cp ./serve.sh /usr/local/bin/clt-serve
+chmod +x *.sh && ./install.sh
 ```
 
 ## Usage
@@ -13,4 +11,7 @@ cp ./serve.sh /usr/local/bin/clt-serve
 ```bash
 cd clt-app/src/components/molecules
 clt-component molecule myNewMolecule
+
+cd clt-app/src/components/containers
+clt-container myNewContainer
 ```
